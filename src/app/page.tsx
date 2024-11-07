@@ -1,101 +1,70 @@
-import Image from "next/image";
+import imgHero from "@/app/assets/images/Hero.png";
+import Cards from "@/components/Cards/Cards";
+import Destinantions from "@/components/Destinantions/Destinantions";
+import Hero from "@/components/Hero/Hero";
+import Offers from "@/components/Offers/Offers";
+import SiteSection from "@/components/SiteSection/SiteSection";
+import img1 from '@/app/assets/images/Rectangle1.png'
+import img2 from '@/app/assets/images/Rectangle2.png'
+import img3 from '@/app/assets/images/Rectangle3.png'
+import img4 from '@/app/assets/images/Rectangle4.png'
+import BookBike from "@/components/BookBike/BookBike";
+import Packages from "@/components/Packages/Packages";
+import Customers from "@/components/Customers/Customers";
+import TabsWithData from "@/components/Tabs/TabsWithData";
+import about from '@/app/assets/images/aboutPicture.png'
 
+const dataCards = [
+  {
+    src: img1,
+    h3: 'Bike and rickshaw rental',
+    alt: 'Bike',
+    text: 'Book your quality vehicle quickly for an hour or all day!'
+  },
+  {
+    src: img2,
+    h3: 'Guided tour of the countryside',
+    alt: 'People',
+    text: 'Live the real Lucchese experience by visiting the suburbs by bike!'
+  },
+  {
+    src: img3,
+    h3: 'Taxi and NCC service',
+    alt: 'Taxi',
+    text: 'Do you need not only a bike but also a driver? Then you have found the right place!'
+  },
+  {
+    src: img4,
+    h3: 'Bus Package',
+    alt: 'Bus',
+    text: 'Do you need not only a bike but also a driver? Then you have found the right place!'
+  },
+]
+const data = {
+  para: 'WELCOME TO OUR SITE!',
+  h2: 'We are the best company for your visit',
+  text: 'After decades of experience, and a whole life in Lucca, we offer you the most complete tourism service in the city. In addition to having bikes and rickshaws to have as much fun as you want, you have the choice of tour guides with whom to tour and drivers for your every need! We offer packages in the way that you get the most at the lowest price. Book with us and we will always be available for you!'
+}
 export default function Home() {
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="https://nextjs.org/icons/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-semibold">
-              src/app/page.tsx
-            </code>
-            .
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
+    <>
+      <Hero
+        content="Enjoy in the best way!"
+        text="Enjoy our services for your trip anytime"
+        component={<TabsWithData />}
+        img={imgHero}
+      />
+      <Destinantions />
+      <SiteSection data={data}
+        src={about}
+        alt="girl picture"
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="https://nextjs.org/icons/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:min-w-44"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
-        </div>
-      </main>
-      <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
-    </div>
+      />
+      <Offers />
+      <Cards cards={dataCards} />
+      <BookBike />
+      <Packages />
+      <Customers />
+    </>
   );
 }

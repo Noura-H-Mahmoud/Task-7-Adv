@@ -1,4 +1,7 @@
 /** @type {import('next').NextConfig} */
-const nextConfig = {};
-
-export default nextConfig;
+const nextConfig = {
+    basePath: "/Task-7-Adv", 
+  };
+  
+  export default nextConfig;
+  
