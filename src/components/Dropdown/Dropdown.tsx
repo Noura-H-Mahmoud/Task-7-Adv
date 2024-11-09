@@ -9,9 +9,10 @@ interface DropdownFieldProps {
     options: string[];
     placeholder?: string;
     className?: string;
+    ClassSpan?: string;
 }
 
-const DropdownField: React.FC<DropdownFieldProps> = ({ icon, label, options, placeholder = "Select an option", className }) => {
+const DropdownField: React.FC<DropdownFieldProps> = ({ icon, label, options, placeholder = "Select an option", className, ClassSpan }) => {
     const [isOpen, setIsOpen] = useState(false);
     const [selectedOption, setSelectedOption] = useState<string | null>(null);
 
@@ -26,11 +27,11 @@ const DropdownField: React.FC<DropdownFieldProps> = ({ icon, label, options, pla
         <div className="relative inline-block">
             <div className={`flex items-start gap-[7px] my-1 md:my-4 pl-0 md:pl-2.5 1410:pl-4 ${className}`}>
                 {typeof icon === "string" ? (
-                    <Image src={icon} loading="lazy" alt={`${label} Icon`} width={24} height={24} />
+                    <Image src={icon} loading="lazy" alt={`${label} Icon`} width={24} height={24} className="h-6" />
                 ) : (
                     icon
                 )}
-                <div>
+                <div className={ClassSpan}>
                     <span className="font-semibold text-blackColor mb-1.5">
                         {label}
                     </span>

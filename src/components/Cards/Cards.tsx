@@ -16,7 +16,7 @@ export default function Cards({ cards }: { cards: DataProps[] }) {
             ">
             {cards.map((card, index: number) => (
                 <div key={index}>
-                    <Image src={card.src} alt={card.alt} loading="lazy" className="w-full mb-5" />
+                    <Image src={card.src} alt={card.alt} loading="lazy" className="w-full h-auto mb-5" />
                     <Title h3={card.h3} />
                     <p className="mt-3 leading-26">{card.text}</p>
                 </div>

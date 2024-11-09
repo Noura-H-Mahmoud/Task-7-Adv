@@ -2,7 +2,7 @@ import React from 'react'
 
 export default function Clock({ color }: { color: string }) {
     return (
-        <svg width="25" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <svg width="24" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M12.5 21.1429C7.45053 21.1429 3.35714 17.0495 3.35714 12C3.35714 6.95054 7.45053 2.85715 12.5 2.85715C17.5495 2.85715 21.6429 6.95054 21.6429 12C21.6429 17.0495 17.5495 21.1429 12.5 21.1429Z" stroke={color} strokeLinecap="round" strokeLinejoin="round" />
             <path d="M12.5 8.57143V13.1429H16.5" stroke={color} strokeLinecap="round" strokeLinejoin="round" />
         </svg>

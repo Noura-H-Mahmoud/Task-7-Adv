@@ -73,7 +73,7 @@ export default function MainSlider({ slides, num = 4, className }: MainSliderPro
     return (
         <div className="slider-container relative w-full">
             <div className="w-full overflow-visible relative">
-                <div className="absolute top-4 lg:-top-10 right-4 flex gap-2 z-10">
+                <div className="absolute top-4 lg:-top-10 right-4 flex gap-5 z-10">
                     <ButtonSlider
                         onClick={handlePrevClick}
                         ariaLabel="Previous Slide"
